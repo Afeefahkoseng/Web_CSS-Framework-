@@ -2,36 +2,50 @@
   --brown-600: #6b4226;
   --brown-700: #5a341f;
   --accent: #d9b38c;
-  --hero-height: 60vh;
+  --hero-height: 56vh;
   font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 /* Basic */
-body { background: #ffffff; color: #222; }
+body { background: #fff; color: #222; }
 .bg-brown { background: linear-gradient(90deg,var(--brown-600),var(--brown-700)); }
 .text-brown { color: var(--brown-700); }
 
-/* Hero */
+/* Hero: gradient + subtle pattern (no external image) */
 .hero{
   height: var(--hero-height);
   display: flex;
-  background-image: url('images/hero-coffee.jpg');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(180deg, rgba(107,66,38,0.95), rgba(90,52,31,0.9));
   position: relative;
 }
-.hero::before{
+.hero::after{
+  /* subtle decorative circles */
   content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(10,10,10,0.35);
+  right: -60px;
+  bottom: -60px;
+  width: 220px;
+  height: 220px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 50%;
 }
 .hero .container { position: relative; z-index: 2; }
+.hero-icon { opacity: .95; }
 
 /* Navbar */
 .navbar { padding: .8rem 0; }
 
-/* Cards (menu) */
+/* Placeholder box for about */
+.placeholder-box{
+  min-height: 160px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.02));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Menu cards */
 .menu-card{
   border: none;
   border-radius: 12px;
@@ -39,7 +53,12 @@ body { background: #ffffff; color: #222; }
   transition: transform .25s ease, box-shadow .25s ease;
   box-shadow: 0 8px 18px rgba(20,20,30,0.06);
 }
-.menu-card img{ height: 220px; object-fit: cover; }
+/* If you add a real <img class="card-img-top"> later it will fit here */
+.menu-image-placeholder{
+  height: 200px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.03));
+  color: rgba(0,0,0,0.35);
+}
 .menu-card:hover{ transform: translateY(-6px); box-shadow: 0 20px 40px rgba(20,20,30,0.12); }
 
 /* Buttons */
@@ -50,14 +69,14 @@ body { background: #ffffff; color: #222; }
 }
 .btn-brown:hover{ background: var(--brown-700); }
 
-/* Footer links */
+/* Footer */
 footer a { opacity: .9; text-decoration: none; }
 footer a:hover { opacity: 1; }
 
 /* Responsive */
 @media (max-width: 768px){
-  .hero{ height: 45vh; background-position: top; }
-  .menu-card img{ height: 180px; }
+  .hero{ height: 44vh; }
+  .menu-image-placeholder{ height: 160px; }
 }
 
 /* Smooth scroll */
