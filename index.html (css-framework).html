@@ -88,18 +88,16 @@
         <!-- เมนู 1 -->
         <div class="col-md-4">
           <div class="card menu-card h-100">
-            <!-- ถ้าคุณยังไม่มีรูป ให้ลบ <img> หรือใช้กล่อง placeholder แบบนี้ -->
-            <div class="menu-image-placeholder d-flex align-items-center justify-content-center">
-              <i class="bi bi-camera-fill fs-2"></i>
-            </div>
 
+            <!-- รูปเมนูอาหาร  -->
+            <img src="https://cornercoffeestore.com/wp-content/uploads/2020/01/how-to-make-a-latte-at-home.jpg" class="card-img-top" alt="Latte">
             <div class="card-body">
               <h5 class="card-title">Latte</h5>
-              <p class="card-text small text-muted">กาแฟลาเต้ครีมมี่ นมฟองนุ่ม</p>
+              <p class="card-text small text-muted">Creamy latte with soft milk foam</p>
             </div>
             <div class="card-footer d-flex justify-content-between align-items-center">
-              <strong>฿85</strong>
-              <a href="#" class="btn btn-sm btn-primary">สั่ง</a>
+              <strong>฿55</strong>
+              <a href="#" class="btn btn-sm btn-primary">order</a>
             </div>
           </div>
         </div>
@@ -107,17 +105,15 @@
         <!-- เมนู 2 -->
         <div class="col-md-4">
           <div class="card menu-card h-100">
-            <div class="menu-image-placeholder d-flex align-items-center justify-content-center">
-              <i class="bi bi-camera-fill fs-2"></i>
-            </div>
+            <img src="https://simplyhomecooked.com/wp-content/uploads/2022/08/buttermilk-pancakes-2.jpg" class="card-img-top" alt="Buttermilk Pancake">
 
             <div class="card-body">
               <h5 class="card-title">Buttermilk Pancake</h5>
-              <p class="card-text small text-muted">แพนเค้กเนื้อนุ่ม เสิร์ฟพร้อมผลไม้สด</p>
+              <p class="card-text small text-muted">Buttermilk Pancake served with fresh fruit</p>
             </div>
             <div class="card-footer d-flex justify-content-between align-items-center">
-              <strong>฿120</strong>
-              <a href="#" class="btn btn-sm btn-primary">สั่ง</a>
+              <strong>฿69</strong>
+              <a href="#" class="btn btn-sm btn-primary">order</a>
             </div>
           </div>
         </div>
@@ -125,64 +121,59 @@
         <!-- เมนู 3 -->
         <div class="col-md-4">
           <div class="card menu-card h-100">
-            <div class="menu-image-placeholder d-flex align-items-center justify-content-center">
-              <i class="bi bi-camera-fill fs-2"></i>
-            </div>
-
+          <img src="https://www.eatyourselfskinny.com/wp-content/uploads/2023/07/chopped-salad-1-scaled.jpg" class="card-img-top" alt="Buttermilk Pancake">
             <div class="card-body">
               <h5 class="card-title">Fresh Salad</h5>
-              <p class="card-text small text-muted">สลัดผักสด ท็อปด้วยถั่วและน้ำสลัดสูตรพิเศษ</p>
+              <p class="card-text small text-muted">Fresh vegetable salad topped with nuts and special dressing</p>
             </div>
             <div class="card-footer d-flex justify-content-between align-items-center">
-              <strong>฿140</strong>
-              <a href="#" class="btn btn-sm btn-primary">สั่ง</a>
+              <strong>฿99</strong>
+              <a href="#" class="btn btn-sm btn-primary">order</a>
             </div>
           </div>
         </div>
 
       </div>
-      <p class="mt-3 small text-muted text-center">หมายเหตุ: หากคุณมีรูปเมนู ให้วางไฟล์รูปในโฟลเดอร์ `images/`
-        แล้วแทนที่ส่วน `.menu-image-placeholder` ด้วย `<img src="images/menu-pic.jpg" class="card-img-top" alt="...">`
-      </p>
+      
     </div>
   </section>
 
   <!-- CONTACT / BOOKING -->
   <section id="contact" class="py-5">
     <div class="container">
-      <h3 class="mb-4 text-center">ติดต่อ / ส่งคำขอจอง</h3>
+      <h3 class="mb-4 text-center">Contact/booking</h3>
       <div class="row justify-content-center">
         <div class="col-md-8">
           <!-- form จะเปิด mail client ด้วยข้อมูลที่กรอก -->
           <form id="bookingForm">
             <div class="row g-3">
               <div class="col-md-6">
-                <label class="form-label">ชื่อ</label>
-                <input id="name" class="form-control" type="text" placeholder="ชื่อของคุณ" required>
+                <label class="form-label">Name</label>
+                <input id="name" class="form-control" type="text" placeholder="Your Name" required>
               </div>
               <div class="col-md-6">
-                <label class="form-label">อีเมลหรือเบอร์โทร</label>
+                <label class="form-label">Email / Phone</label>
                 <input id="contactInfo" class="form-control" type="text"
-                  placeholder="081-xxx-xxxx หรือ email@example.com" required>
+                  placeholder="081-xxx-xxxx or email@ftu.ac.th" required>
               </div>
               <div class="col-12">
-                <label class="form-label">วันที่ & เวลา</label>
+                <label class="form-label">Date & Time</label>
                 <input id="datetime" class="form-control" type="text" placeholder="เช่น 2025-10-01 18:30" required>
               </div>
               <div class="col-12">
-                <label class="form-label">จำนวนคน / ข้อความเพิ่มเติม</label>
+                <label class="form-label">Number of people / additional messages</label>
                 <textarea id="message" class="form-control" rows="3" placeholder="จำนวนคนหรือคำขอพิเศษ"></textarea>
               </div>
               <div class="col-12 text-center">
-                <button type="submit" class="btn btn-brown btn-lg">ส่งคำขอจอง</button>
+                <button type="submit" class="btn btn-brown btn-lg">Submit a booking</button>
               </div>
             </div>
           </form>
 
           <div id="formNote" class="mt-3 small text-muted text-center">
-            <p class="mb-1">หรือโทร: <a id="phoneLink" href="tel:+6681xxxxxxx">081-xxx-xxxx</a></p>
+            <p class="mb-1">or tel: <a id="phoneLink" href="tel:+6681xxxxxxx">081-xxx-xxxx</a></p>
             <p class="mb-0">อีเมลสำรอง: <a id="emailLink"
-                href="mailto:contact@afeefahlab.com">contact@afeefahlab.com</a></p>
+                href="mailto:contact@ftu.afeefah.ac.th">contact@ftu.afeefah.ac.th</a></p>
           </div>
 
         </div>
@@ -217,7 +208,7 @@
       const datetime = encodeURIComponent(document.getElementById('datetime').value.trim());
       const message = encodeURIComponent(document.getElementById('message').value.trim());
       // ตั้งค่าอีเมลร้านที่รับคำขอ (แก้เป็นอีเมลจริงของร้านคุณ)
-      const shopEmail = 'contact@afeefahlab.com';
+      const shopEmail = 'contact@ftu.afeefah.ac.th';
       const subject = encodeURIComponent('คำขอจองโต๊ะจาก ' + (document.getElementById('name').value.trim() || 'ลูกค้า'));
       const body = encodeURIComponent(
         'ชื่อ: ' + decodeURIComponent(name) + '\\n' +
